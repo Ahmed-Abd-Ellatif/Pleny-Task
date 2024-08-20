@@ -1,0 +1,35 @@
+footer{
+    padding: 48px 80px;
+    background-color: #1D2939;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .footer-left{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 32px;
+            height: 32px;
+        }
+        h2{
+            font-size: 16px;
+            font-weight: 500;
+            color: #FFFFFF;
+        }
+    }
+    .footer-right{
+        font-size: 16px;
+        font-weight: 400;
+        color: #98A2B3;
+    }
+}
+
+@media(max-width:400px
+){
+    footer{
+        flex-direction: column;
+        gap: 20px;
+      
+    }
+}

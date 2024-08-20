@@ -1,0 +1,74 @@
+<div class="products">
+  <!-- -------------------------- -->
+  <!-- Breadcrumb -->
+  <!-- -------------------------- -->
+  <div class="breadcrumb">
+    <h2>iphone</h2>
+    <span>Home </span>
+    <span>/ products </span>
+    <span>/ smart phones </span>
+    <span>/ iphone </span>
+  </div>
+  <!-- -------------------------- -->
+  <!-- ALL PRODUCTS -->
+  <!-- -------------------------- -->
+  <div class="products-content">
+    <!-- Category -->
+    <div class="category">
+      <h2>Please select</h2>
+      <form>
+        <div *ngFor="let cat of allCategories">
+          <input
+            type="radio"
+            [id]="cat.slug"
+            name="category"
+            [value]="cat.slug"
+          />
+           
+          <label [for]="cat.slug">{{ cat.name }}</label>
+        </div>
+      </form>
+    </div>
+    <!-- All Products -->
+    <div class="all-products">
+      <div class="items">
+        <div class="item-box" *ngFor="let product of allProducts">
+          <div class="product-image">
+            <img [src]="product.thumbnail" alt="" />
+            <p>-{{ product.discountPercentage }}</p>
+          </div>
+          <h3>{{ product.title }}</h3>
+          <h5>{{ product.description }} %</h5>
+          <div class="price">
+            <span class="old"
+              >{{
+                (product.price / (100 - product.discountPercentage)) * 100
+                  | number : "1.2-2"
+              }}
+              USD</span
+            >
+            <span class="new">{{ product.price }} USD</span>
+          </div>
+          <div class="brand">
+            <p>
+              Brand:<span>{{ product.brand }}</span>
+            </p>
+            <p>
+              Category:<span>{{ product.category }}</span>
+            </p>
+            <p>
+              In stock:<span>{{ product.stock }}</span>
+            </p>
+          </div>
+          <div class="rate">
+            <p>
+              <img src="assets/images/Star.svg" alt="" /> {{ product.rating }}
+              <span>({{ product.reviews.length }})</span>
+            </p>
+          </div>
+          <button>ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

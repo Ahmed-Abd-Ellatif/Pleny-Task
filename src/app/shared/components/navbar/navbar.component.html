@@ -1,0 +1,23 @@
+<header>
+  <!-- LOGO -->
+  <div class="navbar-logo">
+    <img src="assets/images/Logomark.svg" alt="logo" />
+    <h2>ClickTik</h2>
+  </div>
+  <div class="navbar-links">
+    <div>
+      <a href="#">Home</a>
+    </div>
+    <div class="right-section">
+      <div class="search-input" *ngIf="isLoggedin">
+        <img src="assets/images/search-icon.svg" alt="logo" />
+        <input type="text" />
+      </div>
+      <div class="cart" *ngIf="isLoggedin">
+        <img src="assets/images/Cart.svg" alt="Cart" />
+      </div>
+      <a href="#" *ngIf="isLoggedin">Account</a>
+      <a href="#" *ngIf="!isLoggedin">Log in</a>
+    </div>
+  </div>
+</header>
