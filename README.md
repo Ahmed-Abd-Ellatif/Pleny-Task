@@ -1,27 +1,33 @@
 # PlenyCompanyTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+### using 
 
-## Development server
+> 1.  Angular 16
+> 2. Interceptor (Auth & Loading)
+> 3. Auth Guard (CanActivate)
+> 4. LazyLoading
+> 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+------------------------------------------------------------------------------------------------------
 
-## Code scaffolding
+**1 - Authenticate via Login**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![login](https://github.com/user-attachments/assets/55c310a0-4dfd-4588-8f25-15ac42744a9d)
 
-## Build
+**2 - Products**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![products](https://github.com/user-attachments/assets/22ee2331-a5b5-42d8-981c-21ffa1151d16)
 
-## Running unit tests
+ **3 - Pagination**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![pagination](https://github.com/user-attachments/assets/8f2aefdf-d59c-4042-9434-8ad97f5d7d80)
 
-## Running end-to-end tests
+**4 - Search Products**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![searchvalue](https://github.com/user-attachments/assets/ad482b5e-45b2-4119-9200-c20540bfc62c)
+ 
+**5 -  Filter products based on Category**
 
-## Further help
+![fliterbycategory](https://github.com/user-attachments/assets/35592d22-4979-4c82-89fa-1f8bde072c5e)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
