@@ -10,7 +10,7 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   //---------------------------------
   // LOGOUT
   //---------------------------------
@@ -44,5 +44,12 @@ export class NavbarComponent {
   logout() {
     localStorage.clear();
     this._router.navigate(['/auth']);
+  }
+
+  //---------------------------------
+  // OnINIT
+  //---------------------------------
+  ngOnInit(): void {
+    this.getCartByUserId();
   }
 }
