@@ -42,7 +42,6 @@ export class ProductsComponent implements OnInit, DoCheck {
   pageChanged(value: any) {
     this.p = value;
     const skip = (value - 1) * 30;
-
     this.getAllProducts(skip);
   }
   // --------------------------------
