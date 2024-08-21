@@ -1,5 +1,14 @@
 # PlenyCompanyTask
 
+### using 
+
+> 1.  Angular 16
+> 2. Interceptor (Auth & Loading)
+> 3. Auth Guard (CanActivate)
+> 4. LazyLoading
+> 
+
+------------------------------------------------------------------------------------------------------
 
 **1 - Authenticate via Login**
 
