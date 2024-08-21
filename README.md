@@ -9,7 +9,10 @@
 > 
 
 ------------------------------------------------------------------------------------------------------
+**This is a digram showing what I did**
 
+![digram](https://github.com/user-attachments/assets/9693a9bd-b09e-451c-8379-f08c459d9fe1)
+------------------------------------------------------------------------------------------------------
 **1 - Authenticate via Login**
 
 ![login](https://github.com/user-attachments/assets/55c310a0-4dfd-4588-8f25-15ac42744a9d)
