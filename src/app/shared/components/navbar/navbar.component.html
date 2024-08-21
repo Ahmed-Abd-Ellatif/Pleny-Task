@@ -9,18 +9,15 @@
       <a routerLink="/">Home</a>
     </div>
     <div class="right-section">
-      <div class="search-input" *ngIf="isLoggedin">
+      <div class="search-input">
         <img src="assets/images/search-icon.svg" alt="logo" />
         <input type="text" (change)="search($event)" />
       </div>
-      <div class="cart" *ngIf="isLoggedin">
+      <div class="cart">
         <img src="assets/images/Cart.svg" alt="Cart" />
         <span>{{ productCart.length }}</span>
       </div>
-      <a (click)="logout()" *ngIf="isLoggedin" style="cursor: pointer"
-        >Logout</a
-      >
-      <a routerLink="auth" *ngIf="!isLoggedin">Log in</a>
+      <a (click)="logout()" style="cursor: pointer">Logout</a>
     </div>
   </div>
 </header>

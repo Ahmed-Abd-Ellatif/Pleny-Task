@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, shareReplay, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { GetAllCategories } from '../models/model';
 
 @Injectable({
   providedIn: 'root',
@@ -16,8 +17,10 @@ export class ProductsService {
   // -----------------------------------
   //  Get All Categories
   // -----------------------------------
-  getAllCategories(): Observable<any> {
-    return this._http.get('https://dummyjson.com/products/categories');
+  getAllCategories(): Observable<GetAllCategories> {
+    return this._http.get<GetAllCategories>(
+      'https://dummyjson.com/products/categories'
+    );
   }
 
   // -----------------------------------

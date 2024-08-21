@@ -1,6 +1,7 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { shareReplay } from 'rxjs';
+import { GetAllCategories } from '../../models/model';
 
 @Component({
   selector: 'app-products',
@@ -11,7 +12,7 @@ export class ProductsComponent implements OnInit, DoCheck {
   // --------------------------------
   // VALUES
   // --------------------------------
-  allCategories: any[] = [];
+  allCategories: GetAllCategories[] | any = [];
   allProducts: any[] = [];
   products: any[] = [];
   p: number = 1;

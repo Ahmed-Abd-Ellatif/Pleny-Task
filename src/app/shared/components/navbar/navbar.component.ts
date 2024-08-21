@@ -10,17 +10,28 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  //---------------------------------
+  // LOGOUT
+  //---------------------------------
+  productCart = [];
+  //---------------------------------
+  // constructor
+  //---------------------------------
   constructor(
     private _productsService: ProductsService,
     private _router: Router
   ) {}
-
+  //---------------------------------
+  // search Subject
+  //---------------------------------
   search(value: any) {
     this._productsService.onSearchValue(value.target.value);
   }
 
-  productCart = [];
+  //---------------------------------
+  // get Cart By User Id
+  //---------------------------------
   getCartByUserId() {
     const id = Number(localStorage.getItem('userId'));
     this._productsService.getCartByUserId(id).subscribe((res) => {
@@ -28,17 +39,8 @@ export class NavbarComponent implements OnInit {
     });
   }
   //---------------------------------
+  // LOGOUT
   //---------------------------------
-  isLoggedin: boolean = false;
-  ngOnInit(): void {
-    if ('pleny-token' in localStorage) {
-      this.isLoggedin = true;
-    } else {
-      this.isLoggedin = false;
-    }
-    this.getCartByUserId();
-  }
-
   logout() {
     localStorage.clear();
     this._router.navigate(['/auth']);
