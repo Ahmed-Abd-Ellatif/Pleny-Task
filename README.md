@@ -1,27 +1,24 @@
 # PlenyCompanyTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
-## Development server
+**1 - Authenticate via Login**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![login](https://github.com/user-attachments/assets/55c310a0-4dfd-4588-8f25-15ac42744a9d)
 
-## Code scaffolding
+**2 - Products**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![products](https://github.com/user-attachments/assets/22ee2331-a5b5-42d8-981c-21ffa1151d16)
 
-## Build
+ **3 - Pagination**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![pagination](https://github.com/user-attachments/assets/8f2aefdf-d59c-4042-9434-8ad97f5d7d80)
 
-## Running unit tests
+**4 - Search Products**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![searchvalue](https://github.com/user-attachments/assets/ad482b5e-45b2-4119-9200-c20540bfc62c)
+ 
+**5 -  Filter products based on Category**
 
-## Running end-to-end tests
+![fliterbycategory](https://github.com/user-attachments/assets/35592d22-4979-4c82-89fa-1f8bde072c5e)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
