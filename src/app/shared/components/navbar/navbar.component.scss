@@ -52,6 +52,25 @@ header{
                     outline: none;
                 }
             }
+            .cart{
+                position: relative;
+                span{
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    background-color: #41CCCC;
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: #344054;
+                    font-size: 10px;
+                    border: 2px solid #fff;
+                }
+            }
         }
        
     }

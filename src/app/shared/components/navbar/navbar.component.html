@@ -6,18 +6,21 @@
   </div>
   <div class="navbar-links">
     <div>
-      <a href="#">Home</a>
+      <a routerLink="/">Home</a>
     </div>
     <div class="right-section">
       <div class="search-input" *ngIf="isLoggedin">
         <img src="assets/images/search-icon.svg" alt="logo" />
-        <input type="text" />
+        <input type="text" (change)="search($event)" />
       </div>
       <div class="cart" *ngIf="isLoggedin">
         <img src="assets/images/Cart.svg" alt="Cart" />
+        <span>{{ productCart.length }}</span>
       </div>
-      <a href="#" *ngIf="isLoggedin">Account</a>
-      <a href="#" *ngIf="!isLoggedin">Log in</a>
+      <a (click)="logout()" *ngIf="isLoggedin" style="cursor: pointer"
+        >Logout</a
+      >
+      <a routerLink="auth" *ngIf="!isLoggedin">Log in</a>
     </div>
   </div>
 </header>

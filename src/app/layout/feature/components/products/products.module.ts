@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
-
-
+import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
-  declarations: [
-    ProductsComponent
-  ],
+  declarations: [ProductsComponent],
   imports: [
     CommonModule,
-    ProductsRoutingModule
-  ]
+    ProductsRoutingModule,
+    NavbarComponent,
+    NgxPaginationModule,
+  ],
 })
-export class ProductsModule { }
+export class ProductsModule {}

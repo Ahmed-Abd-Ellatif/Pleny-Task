@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { LoginObj } from '../../models/model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +10,28 @@ import { LoginObj } from '../../models/model';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(private _fb: FormBuilder, private _authService: AuthService) {}
-
+  // ------------------------------
+  // CONSTRUCTOR
+  // ------------------------------
+  constructor(
+    private _fb: FormBuilder,
+    private _authService: AuthService,
+    private _router: Router
+  ) {}
+  // ------------------------------
+  // FORM
+  // ------------------------------
   form = this._fb.group({
-    username: ['emilys'],
-    email: ['emily.johnson@x.dummyjson.com'],
-    password: ['emilyspass'],
-    // expiresInMins: [30],
+    username: ['carterb'],
+    email: ['carter.baker@x.dummyjson.com'],
+    password: ['carterbpass'],
   });
   get formControl() {
     return this.form.controls;
   }
-
+  // ------------------------------
+  // SUBMIT
+  // ------------------------------
   submit() {
     const obj: LoginObj = {
       username: this.form.value.username!,
@@ -30,6 +41,8 @@ export class LoginComponent {
       next: (res) => {
         console.log(res);
         localStorage.setItem('pleny-token', res.token);
+        localStorage.setItem('userId', JSON.stringify(res.id));
+        this._router.navigate(['/']);
       },
       error: (err) => {
         console.log(err);

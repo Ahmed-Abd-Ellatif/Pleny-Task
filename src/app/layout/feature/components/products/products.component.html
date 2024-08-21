@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="products">
   <!-- -------------------------- -->
   <!-- Breadcrumb -->
@@ -6,8 +7,8 @@
     <h2>iphone</h2>
     <span>Home </span>
     <span>/ products </span>
-    <span>/ smart phones </span>
-    <span>/ iphone </span>
+    <span>{{ filterName ? "/ " + filterName : "" }} </span>
+    <!-- <span>/ iphone </span> -->
   </div>
   <!-- -------------------------- -->
   <!-- ALL PRODUCTS -->
@@ -15,14 +16,26 @@
   <div class="products-content">
     <!-- Category -->
     <div class="category">
-      <h2>Please select</h2>
+      <h2>Products</h2>
       <form>
+        <div>
+          <input
+            type="radio"
+            id="all"
+            name="category"
+            value="all"
+            (change)="onCategoryList('https://dummyjson.com/products')"
+          />
+           
+          <label for="all">All</label>
+        </div>
         <div *ngFor="let cat of allCategories">
           <input
             type="radio"
             [id]="cat.slug"
             name="category"
             [value]="cat.slug"
+            (change)="onCategoryList(cat.url, cat.name)"
           />
            
           <label [for]="cat.slug">{{ cat.name }}</label>
@@ -31,8 +44,15 @@
     </div>
     <!-- All Products -->
     <div class="all-products">
-      <div class="items">
-        <div class="item-box" *ngFor="let product of allProducts">
+      <div class="items" *ngIf="allProducts.length > 0">
+        <div
+          class="item-box"
+          *ngFor="
+            let product of allProducts
+              | paginate
+                : { itemsPerPage: pageSize, currentPage: p, totalItems: total }
+          "
+        >
           <div class="product-image">
             <img [src]="product.thumbnail" alt="" />
             <p>-{{ product.discountPercentage }}</p>
@@ -66,9 +86,24 @@
               <span>({{ product.reviews.length }})</span>
             </p>
           </div>
-          <button>ADD TO CART</button>
+          <button (click)="addToCart(product.id)">ADD TO CART</button>
         </div>
+      </div>
+      <div>
+        <h2 *ngIf="allProducts.length == 0">
+          There are no results for your search ...
+        </h2>
       </div>
     </div>
   </div>
 </div>
+
+<pagination-controls
+  (pageChange)="pageChanged($event)"
+  (pageBoundsCorrection)="pageChanged($event)"
+  [maxSize]="5"
+  [directionLinks]="true"
+  [autoHide]="true"
+  [responsive]="true"
+>
+</pagination-controls>
