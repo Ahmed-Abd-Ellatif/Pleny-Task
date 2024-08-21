@@ -54,6 +54,8 @@ export class ProductsComponent implements OnInit, DoCheck {
     this.filterName = name!;
     this._productsService.getProductsByCategory(url).subscribe({
       next: (res) => {
+        this.total = res.total;
+        this.pageSize = res.limit;
         this.allProducts = res.products;
       },
       error: (err) => {
@@ -67,12 +69,11 @@ export class ProductsComponent implements OnInit, DoCheck {
   filterBySearchValue() {
     this._productsService.searchValue.subscribe((res: any) => {
       this.filterName = res;
-      this._productsService
-        .getProductsBySearchValue(res)
-
-        .subscribe((res) => {
-          this.allProducts = res.products;
-        });
+      this._productsService.getProductsBySearchValue(res).subscribe((res) => {
+        this.total = res.total;
+        this.pageSize = res.limit;
+        this.allProducts = res.products;
+      });
     });
   }
   // --------------------------------

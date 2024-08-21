@@ -5,13 +5,13 @@
 .breadcrumb{
     margin-bottom: 50px;
     h2{
-        color: #1e1e1e;
+        color: var(--black-color);
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 29px;
     }
     span{
-        color: #1E1E1E;
+        color: var(--black-color);
         font-size: 18px;
         font-weight: 400;
         &:last-child{
@@ -29,19 +29,18 @@
     // category
     .category{
         width: 25%;
-        border: 0.5px solid #424242;
+        border: 0.5px solid var(--gray-color);
         border-radius: 8px;
         padding: 12px;
-        h2{ color: #1E1E1E;
+        h2{ color: var(--black-color);
             font-size: 16px;
             font-weight: 700;
-        border-bottom: 0.5px solid #F2F4F7;
+        border-bottom: 0.5px solid var(--offwhite-color);
     padding-bottom: 8px;
 margin-bottom: 8px;}
         form{
-            input{}
             label{
-                color: #1E1E1E;
+                color: var(--black-color);
                 font-size: 16px;
                 font-weight: 400;
             }
@@ -58,7 +57,7 @@ margin-bottom: 8px;}
     gap: 24px;
     .item-box{
         width: 282px;
-        border: 0.5px solid #424242;
+        border: 0.5px solid var(--gray-color);
         border-radius: 8px;
         overflow: hidden;
         position: relative;
@@ -72,25 +71,25 @@ margin-bottom: 8px;}
                 position: absolute;
                 top: 12px;
                 left: 13px;
-                background-color: #41CCCC;
+                background-color: var(--cyan-color);
                 padding: 4px 8px;
                 border-radius: 4px;
                 font-size: 12px;
                 font-weight: 700;
-                color: #344054;
+                color: var(--blue-color);
             }
         }
         h3{
             font-size: 20px;
             font-weight: 700;
-            color: #344054;
+            color: var(--blue-color);
             margin-bottom: 8px;
             padding: 0 16px;
         }
         h5{
             font-size: 14px;
             font-weight: 400;
-            color: #344054;
+            color: var(--blue-color);
             margin-bottom: 34px;
             padding: 0 16px;
         }
@@ -100,20 +99,20 @@ margin-bottom: 8px;}
             .old{
                 font-size: 14px;
                 font-weight: 700;
-                color: #344054;
+                color: var(--blue-color);
                 margin-right: 14px;
                 text-decoration: line-through;
             }
             .new{
                 font-size: 14px;
                 font-weight: 700;
-                color: #344054;
+                color: var(--blue-color);
             }
         }
         .brand{
             padding: 0 16px;
             p{
-                color: #344054;
+                color: var(--blue-color);
                 font-size: 14px ;
                 font-weight: 400;
                 margin-bottom: 8px;
@@ -129,9 +128,9 @@ margin-bottom: 8px;}
             p{
                 font-size: 16px;
                 font-weight: 700;
-                color:#F4B000;
+                color:var(--yellow-color);
                 span{
-                    color: #1E1E1E;
+                    color: var(--black-color);
                     font-size: 16px;
                     font-weight: 400;
                 }
@@ -139,7 +138,7 @@ margin-bottom: 8px;}
         }
         button{
             text-align: center;
-            background-color: #41CCCC;
+            background-color: var(--cyan-color);
             border-radius: 4px;
             height: 50px;
             width: 90%;
@@ -147,7 +146,7 @@ margin-bottom: 8px;}
             border: none;
             font-size: 16px;
             font-weight: 700;
-            color: #344054;
+            color: var(--blue-color);
         }
     }
 }
@@ -173,7 +172,7 @@ margin-bottom: 8px;}
                 gap: 20px;
                 flex-wrap: wrap;
                 div{
-                    background-color: #41cccc5f;
+                    background-color: var(--cyan-color)5f;
                     padding: 5px;
                     border-radius: 8px;
                 }

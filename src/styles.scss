@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+    // -----------------------------
+    // COLORS
+    // -----------------------------
+    --black-color: #1e1e1e;
+    --gray-color: #424242;
+    --cyan-color: #41CCCC;
+    --yellow-color: #F4B000;
+    --blue-color: #344054;
+    --white-color: #ffffff;
+    --offwhite-color: #F2F4F7;
+}
+
+
 *{
     padding: 0;
     margin: 0;
